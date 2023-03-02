@@ -19,9 +19,9 @@ export const firstRow = [
     },
     {
         title: "Validate the network",
-        linkUrl: "docs/maintain/validate/validator-index/",
+        linkUrl: "docs/maintain/validate/validator-intro/",
         imageUrl: "img/supernet.svg",
-        description: "Become a Polygon validator by operating a node and participating in consensus."
+        description: "Discover how to become a Polygon validator and participate in consensus."
     },
     {
         title: "Participate in Governance",

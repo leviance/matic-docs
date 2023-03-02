@@ -1,6 +1,7 @@
 ---
-id: validator-index
-title: Validator Index
+id: validator-intro
+title: Validators on Polygon PoS
+sidebar_label: Introduction
 description: A collection of instructions on how to run and operate validator nodes on the Polygon Network
 keywords:
   - docs
@@ -10,7 +11,6 @@ keywords:
   - maintain
   - architecture
   - Validator Index
-slug: validator-index
 image: https://wiki.polygon.technology/img/polygon-wiki.png
 ---
 
@@ -84,12 +84,12 @@ This section guides you through the following topics:
 
 * [Validator responsibilities](validator-responsibilities.md)
 * Joining the network as a validator:
-  * [Start and run the nodes with Ansible](run-validator-ansible.md)
-  * [Start and run the nodes with binaries](run-validator-binaries.md)
-  * [Stake as a validator](validator-staking-operations.md)
+  * [Start and run the nodes using Ansible](/operate/validator/run-validator-ansible.md)
+  * [Start and run the nodes using Binaries](/operate/validator/run-validator-binaries.md)
+  * [Stake as a validator](/operate/validator/validator-staking-operations.md)
 * Maintaining your validator nodes:
-  * [Change the signer address](change-signer-address.md)
-  * [Change the commission](validator-commission-operations.md)
+  * [Change the signer address](/operate/validator/change-signer-address.md)
+  * [Change the commission](/operate/validator/validator-commission-operations.md)
 
 Community assistance:
 

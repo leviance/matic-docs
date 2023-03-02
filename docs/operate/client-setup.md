@@ -1,8 +1,8 @@
 ---
-id: client-setup
-title: Set up an Archive Node Client
-sidebar_label: Set up an Archive Node Client
-description: "System requirements and client setup."
+id: erigon-client
+title: Set up an Erigon Client
+sidebar_label: Setup Erigon Client
+description: System requirements and client setup for Erigon based Archive Nodes.
 keywords:
   - erigon
   - archive
@@ -15,16 +15,8 @@ image: https://wiki.polygon.technology/img/polygon-wiki.png
 
 ## System Requirements
 
-### Archive Node
-
-- 16-core CPU
-- 64 GB RAM
-- Basically io1 or above with at least 20k+ iops and raid-0 based disk structure
-
-### Erigon Client
-
 - For an Archive node of Polygon Mainnet: 5TB
-- For an Archive node of Polygon Mumbai: 1TB
+- For an Archive node of Mumbai Testnet: 1TB
 - SSD or NVMe. Bear in mind that SSD performance deteriorates when close to capacity
 - RAM: >= 16GB, 64-bit architecture
 - Golang version >= 1.18, GCC 10+ 
@@ -35,9 +27,7 @@ On HDDs, Erigon will always stay N blocks behind the chain tip, but will not fal
 
 :::
 
-## Erigon Client Setup
-
-### How to Install
+## Install Erigon Client
 
 Run the following commands to install Erigon:
 
@@ -52,7 +42,7 @@ This should create the binary at `./build/bin/erigon`
 
 Use the tag `v0.0.5` on our forked repo to have a stable version. 
 
-### How to Start
+## Start Erigon Client
 
 To start Erigon, run:
 
@@ -63,7 +53,7 @@ erigon --chain=mumbai
 - Use `chain=mumbai` for Mumbai testnet
 - Use `chain=bor-mainnet` for Polygon Mainnet
 
-### How to Configure Erigon
+## Configure Erigon Client
 
 - If you want to store Erigon files in a non-default location, use `-datadir`
     
@@ -81,7 +71,7 @@ erigon --chain=mumbai
     
     - For Polygon Mainnet: [https://heimdall-api.polygon.technology](https://heimdall-api.polygon.technology)
 
-### Tips for Faster Sync
+## Tips for Faster Sync
 
 - Use the machine with high IOPS and RAM for the faster initial sync
 - Use the below commands to increase snapshot download/upload speed:

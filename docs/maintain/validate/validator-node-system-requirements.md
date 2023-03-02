@@ -12,7 +12,7 @@ slug: validator-node-system-requirements
 image: https://wiki.polygon.technology/img/polygon-wiki.png
 ---
 
-The system requirements listed in this section are both for the [Sentry](/docs/maintain/glossary.md#sentry) node and the [Validator](/docs/maintain/glossary.md#validator) node.
+The system requirements listed in this section are both for the [Sentry](/maintain/glossary.md#sentry) node and the [Validator](/maintain/glossary.md#validator) node.
 
 The **minimum** system requirements mean you can run the nodes but the setup is not future-proof.
 

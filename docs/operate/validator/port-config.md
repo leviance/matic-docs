@@ -1,7 +1,7 @@
 ---
 id: port-config
-title: Port Configuration Details for Nodes
-sidebar: Port Configuration
+title: Port Configuration Details For Sentry & Validator Nodes
+sidebar_label: Port Configuration
 description: How to configure ports for Sentry and validator nodes
 keywords:
   - wiki

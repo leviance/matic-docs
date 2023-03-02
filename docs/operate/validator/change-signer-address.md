@@ -1,7 +1,8 @@
 ---
 id: change-signer-address
 title: Change Your Signer Address
-description: Change the signer address of your validator
+sidebar_label: Change Signer Address
+description: Change the signer address of your validator node.
 keywords:
   - docs
   - matic
@@ -9,7 +10,6 @@ keywords:
   - signer address
   - change
   - validator
-slug: change-signer-address
 image: https://wiki.polygon.technology/img/polygon-wiki.png
 ---
 import useBaseUrl from '@docusaurus/useBaseUrl';

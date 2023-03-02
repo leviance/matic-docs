@@ -1,16 +1,14 @@
 ---
 id: known-issues
 title: Known Issues & Errors
-description: Knowledge Base of common errors
+description: Knowledge base of common known issues & errors for Polygon Validators.
 keywords:
   - docs
   - polygon
-  - matic
   - issues
   - errors
   - invalid
   - command
-slug: known-issues
 image: https://wiki.polygon.technology/img/polygon-wiki.png
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: full-node-deployment
-title: Run a full node with Ansible
+title: Run a Full Node using Ansible
+sidebar_label: Using Ansible
 description: Deploy a Full Node using Ansible
 keywords:
   - docs

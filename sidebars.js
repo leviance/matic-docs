@@ -78,24 +78,62 @@ module.exports = {
   operatepos: [
     "operate/technical-requirements",
     "operate/snapshot-instructions-heimdall-bor",
-    "operate/network-rpc-endpoints",
-    "operate/access-node-alchemy",
-    "operate/full-node-deployment",
-    "operate/full-node-binaries",
-    "operate/full-node-docker",
-    "operate/full-node",
     {
       type: "category",
-      label: "Erigon's Archive Node",
+      label: "Run a Full Node",
       link: {
         type: "generated-index",
       },
+      collapsed: false,
       items: [
-        "operate/erigon/client-setup",
-        "operate/erigon/archive-node-ansible",
-        "operate/erigon/archive-node-binaries",
+        "operate/full-node-deployment",
+        "operate/full-node-binaries",
+        "operate/full-node-docker",
+        "operate/full-node",
       ],
     },
+    {
+      type: "category",
+      label: "Run a Validator Node",
+      link: {
+        type: "generated-index",
+      },
+      collapsed: false,
+      items: [
+        "operate/validator/run-validator-binaries",
+        "operate/validator/run-validator-ansible",
+        "operate/validator/run-validator",
+        {
+          type: "category",
+          label: "Node Management",
+          link: {
+            type: "generated-index",
+          },
+          items: [
+            "operate/validator/change-signer-address",
+            "operate/validator/how-to",
+            "operate/validator/known-issues",
+            {
+              type: "category",
+              label: "Staking Operations",
+              link: {
+                type: "generated-index",
+              },
+              items: [
+                "operate/validator/validator-staking-operations",
+                "operate/validator/validator-commission-operations",
+              ],
+            },
+            "operate/validator/port-config"
+          ],
+        },
+      ],
+    },
+    "operate/network-rpc-endpoints",
+    "operate/default-ports",
+    /*"operate/access-node-alchemy",*/
+    "operate/archive-node",
+    "operate/erigon-client",
 ],
 
   develop: [
@@ -394,119 +432,34 @@ module.exports = {
   ],
 
   maintain: [
-    "maintain/validate/validator-index",
+    "maintain/validate/validator-intro",
+    "maintain/validate/architecture",
+    "maintain/validate/responsibilities",
+    "maintain/validate/validator-performance-overview",
+    "maintain/validate/core-components/staking",
+    "maintain/validate/liquid-delegation",
+    "maintain/validate/rewards",
     {
       type: "category",
-      label: "Validator Overview",
+      label: "Components",
       link: {
         type: "generated-index",
       },
       collapsed: false,
       items: [
-        "maintain/validator/architecture",
-        "maintain/validator/responsibilities",
-        "maintain/validator/core-components/staking",
-        "maintain/polygon-basics/liquid-delegation",
-        "maintain/validator/rewards",
-        {
-          type: "category",
-          label: "Core Components",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-            "maintain/validator/core-components/heimdall-chain",
-            "maintain/validator/core-components/bor-chain",
-            "maintain/validator/core-components/checkpoint-mechanism",
-            "maintain/validator/core-components/key-management",
-            "maintain/validator/core-components/derivatives",
-            "maintain/validator/core-components/proposers-producers-selection",
-            "maintain/validator/core-components/proposer-bonus",
-            "maintain/validator/core-components/transaction-fees",
-            "maintain/validator/core-components/state-sync-mechanism",
-          ],
-        },
+        "maintain/validate/core-components/heimdall-chain",
+        "maintain/validate/core-components/bor-chain",
+        "maintain/validate/core-components/checkpoint-mechanism",
+        "maintain/validate/core-components/key-management",
+        "maintain/validate/core-components/derivatives",
+        "maintain/validate/core-components/proposers-producers-selection",
+        "maintain/validate/core-components/proposer-bonus",
+        "maintain/validate/core-components/transaction-fees",
+        "maintain/validate/core-components/state-sync-mechanism",
       ],
     },
-    {
-      type: "category",
-      label: "Validate",
-      link: {
-        type: "generated-index",
-      },
-      collapsed: false,
-      items: [
-        {
-          type: "category",
-          label: "Node Deployment",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-            "maintain/validate/validator-node-system-requirements",
-            "maintain/validate/run-validator-binaries",
-            "maintain/validate/run-validator-ansible",
-            "maintain/validate/run-validator",
-          ],
-        },
-        {
-          type: "category",
-          label: "Node Management",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-            "maintain/port-management",
-            "maintain/validate/change-signer-address",
-          ],
-        },
-        {
-          type: "category",
-          label: "Staking Operations",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-            "maintain/validate/validator-staking-operations",
-            "maintain/validate/validator-commission-operations",
-          ],
-        },
-        {
-          type: "category",
-          label: "Validator Performance Metrics",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-            "maintain/validate/validator-performance-overview",
-          ],
-        },
-        "avail/node/avail-node-management",
-        {
-          type: "category",
-          label: "Knowledge Base",
-          link: {
-            type: "generated-index",
-          },
-          items: [
-            "maintain/validate/kb/known-issues",
-            "maintain/validate/kb/how-to",
-            {
-              type: "category",
-              label: "Additional Information",
-              link: {
-                type: "generated-index",
-              },
-              items: [
-                "maintain/validate/kb/additional-info/port-config"
-              ]
-            }
-          ],
-        },
-        "maintain/reporting-issues",
-        "maintain/glossary",
-      ],
-    },
+    "maintain/reporting-issues",
+    "maintain/glossary",
   ],
   integrate: [
     "integrate/quickstart",

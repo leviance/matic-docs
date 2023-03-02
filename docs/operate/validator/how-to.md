@@ -1,7 +1,7 @@
 ---
 id: how-to
-title: Pre-requisites & How Tos
-description: Polygon validator tutorials
+title: How-To Guides
+description: Polygon validator tutorials and How-to Guides.
 keywords:
   - docs
   - polygon

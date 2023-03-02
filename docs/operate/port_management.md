@@ -1,15 +1,14 @@
 ---
-id: port-management
-title: Technical Infrastructure For Nodes
-sidebar_label: Technical Infrastructure For Nodes
-description: List of default ports used across Polygon nodes
+id: default-ports
+title: Default Ports For Nodes
+sidebar_label: Default Ports
+description: List of default ports used across Polygon PoS nodes.
 keywords:
   - docs
   - polygon
   - matic
   - port
   - port management
-  - infrastructure
   - default ports
 image: https://wiki.polygon.technology/img/polygon-wiki.png
 ---

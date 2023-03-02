@@ -1,7 +1,7 @@
 ---
 id: validator-performance-overview
 title: Validator Performance Framework
-sidebar_label: Overview
+sidebar_label: Performance Framework
 description: Learn about the validator performance metrics that help validators self-regulate.
 keywords:
   - docs
@@ -17,8 +17,6 @@ image: https://wiki.polygon.technology/img/polygon-wiki.png
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
-
-# Validator performance framework
 
 This is a guide to help users understand the validator performance parameters the community agreed to in [PIP-4](https://snapshot.org/#/polygonvalidators.eth/proposal/0x1e9d79b6406870ebd0b66ac256b59012f97f3f4d652052681c6fb1077e251804).
 

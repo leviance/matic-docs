@@ -1,12 +1,11 @@
 ---
 id: network-rpc-endpoints
 title: Network Endpoints
-sidebar_label: Endpoints
-description: Network endpoints for Polyon PoS mainnet and testnet
+sidebar_label: Network Endpoints
+description: Network endpoints for Polyon PoS Mainnet and Mumbai Testnet.
 keywords:
   - docs
   - polygon
-  - matic
   - remote procedure call
   - network endpoints
   - rpcs
@@ -14,8 +13,8 @@ keywords:
   - websocket
   - wss
 image: https://wiki.polygon.technology/img/polygon-wiki.png
-slug: endpoints
 ---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -26,12 +25,12 @@ lists their associated RPC and node endpoints.
   defaultValue="mainnet"
   values={[
     { label: 'PoS Mainnet', value: 'mainnet', },
-    { label: 'PoS Testnet', value: 'mumbai', },
+    { label: 'Mumbai Testnet', value: 'mumbai', },
   ]
 }>
 <TabItem value="mumbai">
 
-## Mumbai PoS Testnet
+## Mumbai Testnet
 
 Mumbai Testnet replicates the Polygon Mainnet and is used for testing. Users can obtain
 testnet tokens from the [faucet](https://faucet.polygon.technology/).

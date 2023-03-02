@@ -1,6 +1,7 @@
 ---
 id: full-node
-title: Run a full node with Packages
+title: Run a Full Node using Packages
+sidebar_label: Using Packages
 description: Learn how to run a full node on the Polygon network using utility scripts.
 keywords:
   - docs

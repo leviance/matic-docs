@@ -1,6 +1,7 @@
 ---
 id: snapshot-instructions-heimdall-bor
 title: Heimdall and Bor Snapshots
+sidebar_label: Heimdall & Bor Snapshots
 description: Heimdall and Bor snapshot Instructions for faster syncing.
 keywords:
   - docs

@@ -1,8 +1,8 @@
 ---
 id: full-node-docker
-title: Run a full node with Docker
-sidebar_label: Run a full node with Docker
-description:  Guide to run a full node using Docker
+title: Run a Full Node using Docker
+sidebar_label: Using Docker
+description: Guide to run a full node using Docker on Polygon PoS network.
 keywords:
   - docs
   - matic
