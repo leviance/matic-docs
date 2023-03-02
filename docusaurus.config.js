@@ -91,20 +91,8 @@ module.exports = {
             from: '/docs/category/faq/'
           },
           {
-            to:'/docs/maintain/validate/kb/known-issues',
-            from:'/docs/maintain/validate/faq/known-issues'
-          },
-          {
-            to:'/docs/maintain/validate/kb/how-to',
-            from:'/docs/maintain/validate/faq/how-to'
-          },
-          {
             to:'/docs/faq/validator-faq',
             from:'/docs/maintain/validate/faq/validator-faq'
-          },
-          {
-            to:'/docs/maintain/validator/responsibilities',
-            from:'/docs/maintain/validate/validator-responsibilities'
           },
           {
             to:'/docs/operate/technical-requirements',
@@ -113,10 +101,6 @@ module.exports = {
           {
             to:'/docs/operate/snapshot-instructions-heimdall-bor',
             from:'/docs/develop/network-details/snapshot-instructions-heimdall-bor'
-          },
-          {
-            to:'/docs/operate/endpoints',
-            from:'/docs/develop/network-details/endpoints'
           },
           {
             to:'/docs/operate/access-node-alchemy',
