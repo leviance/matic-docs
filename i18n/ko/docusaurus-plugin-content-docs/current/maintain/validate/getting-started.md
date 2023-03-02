@@ -1,5 +1,5 @@
 ---
-id: validator-index
+id: validator-intro
 title: Validator Index
 description: A collection of instructions on how to run and operate validator nodes on the Polygon Network.
 keywords:
