@@ -183,7 +183,7 @@ Now, the last part of the Padding-KK-Bit SM is to keep track of the last subdivi
 
 #### Example: Storing 256-bit intermediate hash outputs
 
-Consider the 256 bits, $\mathtt{0b|10110011\dots1010|\dots|11\dots11|01\dots10101101|}$, where "$|$" separates every set of 32 bits. Below table displays how the $256 + 1$ rows of a $1993$-block are stored in the registers $\{\mathtt{sOut_i}|\ 0 \leq i \leq 7 \}$.
+Consider the 256 bits, $\mathtt{0b|10110011\dots1010|\dots|11\dots11|01\dots10101101|}$, where "$|$" separates every set of 32 bits. The table below displays how the $256 + 1$ rows of a $1993$-block are stored in the registers $\{\mathtt{sOut_i}|\ 0 \leq i \leq 7 \}$.
 
 $$
 \small
@@ -195,8 +195,8 @@ $$
 \quad\text{ }\text{ }0 & \mathtt{0b01} & \mathtt{0b0} & \dots & \mathtt{0b0} & 2 & 0& \dots & 0 & 0 \\ 
 \quad\text{ }\text{ }1 & \mathtt{0b101} & \mathtt{0b0} & \dots & \mathtt{0b0} & 2^2 & 0&  \dots & 0 & 0\\ 
 \quad\text{ }\text{ }1 & \mathtt{0b1101} & \mathtt{0b0} & \dots & \mathtt{0b0} & 2^3 & 0& \dots & 0 & 0\\ 
-\quad\text{ }\text{ }0 & \mathtt{0b01101} & \mathtt{0b0} & \dots & \mathtt{0b0} & 2^6 & 0& \dots & 0 & 0\\ 
-\quad\text{ }\text{ }1 & \mathtt{0b101101} & \mathtt{0b0} & \dots & \mathtt{0b0} & 2^6 & 0& \dots & 0 & 0\\ 
+\quad\text{ }\text{ }0 & \mathtt{0b01101} & \mathtt{0b0} & \dots & \mathtt{0b0} & 2^4 & 0& \dots & 0 & 0\\ 
+\quad\text{ }\text{ }1 & \mathtt{0b101101} & \mathtt{0b0} & \dots & \mathtt{0b0} & 2^5 & 0& \dots & 0 & 0\\ 
 \quad\text{ }\text{ }0 & \mathtt{0b0101101} & \mathtt{0b0} & \dots & \mathtt{0b0} & 2^6 & 0& \dots & 0 & 0\\ 
 \quad\text{ }\text{ }1 & \mathtt{0b10101101} & \mathtt{0b0} & \dots & \mathtt{0b0} & 2^7 & 0& \dots & 0 & 0\\
 
