@@ -1064,7 +1064,8 @@ module.exports = {
                 "zkEVM/zkProver/intro-generic-sm",
                 "zkEVM/zkProver/exec-trace-correct",
                 "zkEVM/zkProver/ending-program",
-                "zkEVM/zkProver/program-counter"
+                "zkEVM/zkProver/program-counter",
+                "zkEVM/zkProver/plookup",
               ]
             },
           ]
