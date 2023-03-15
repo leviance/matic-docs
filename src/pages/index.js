@@ -5,7 +5,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
-import { firstRow, secondRow, thirdRow, networkBanner } from "../data/features";
+import { firstRow, publicRow, thirdRow, networkBanner } from "../data/features";
 import SearchBar from '@theme-original/SearchBar'; // Import the SearchBar component
 
 import Tabs from '@theme/Tabs';
@@ -43,24 +43,6 @@ function FirstRow({ title, status, description, linkUrl, imageUrl }) {
           <div className="descriptions">{description}</div>
         </div>
       </Link>
-    </div>
-  );
-}
-
-function SecondRow({ title, status, description, linkUrl, animationUrl }) {
-  return (
-    <div className="tabs-element">
-      <div className="tabs_animation-wrapper">
-        <div className="tabs_animation-embed">
-          <iframe src={animationUrl} frameborder="0" allow="autoplay" className="tabs-frame" title="Hero" data-ready="true"></iframe>
-        </div>
-      </div>
-      <div class="tabs-content">
-        <h4 class="text-weight-medium">{title}<span class="solution-status">{status}</span></h4>
-        <div class="padding-bottom padding-small"></div>
-        <p class="description-text">{description}</p>
-        <div class="padding-bottom custom-padding"></div>
-      </div>
     </div>
   );
 }
@@ -148,15 +130,14 @@ function Home() {
               ))}{" "}
           </div>
 
-
           <div className="row">
-            <div className="index-page">
+            <div className="index-page exclude">
               <section className="section container-fluid">
                 <div className="row justify-content-center">
                   <div className="col-md-10">
                     <h3 className="mt-0">Mass Scale for Mass Adaption</h3>
                     <p className="lead">By leveraging cutting-edge technologies like ZK cryptography and transaction rollups, Polygon is making blockchains more accessible and user-friendly than ever before and is at the forefront of mass adoption through various layer 2s and appchains.</p>
-                    <a href="#polygon-protocol" onClick={(e) => { e.preventDefault(); smoothScrollTo('#polygon-protocols'); }}><b>Protocol docs ↓</b></a>
+                    <a href="#polygon-protocol" onClick={(e) => { e.preventDefault(); smoothScrollTo('#polygon-protocols'); }}><b>Explore our Protocol Docs ↓</b></a>
                   </div>
                 </div>
               </section>
@@ -168,7 +149,7 @@ function Home() {
                 {label: 'Data Availability', value: 'da'},
                 {label: 'Decentralized Identity', value: 'identity'},
               ]}>
-              
+
             <TabItem value="public">
               <div class="tabs-element">
                 <div class="tabs_animation-wrapper">
@@ -177,7 +158,7 @@ function Home() {
                   </div>
                 </div>
                 <div class="tabs-content">
-                  <h4 class="text-weight-medium">Polygon PoS  <span class="solution-status">Live</span></h4>
+                  <h4 class="text-weight-medium"><a href="docs/pos/polygon-architecture">Polygon PoS </a><span class="solution-status">Live</span></h4>
                   <div class="padding-bottom padding-small"></div>
                   <p class="description-text">Support the most widely used Ethereum scaling ecosystem that offers EVM compatibility and an ultimate user experience with fast transactions at near-zero gas fees today.</p>
                   <div class="padding-bottom custom-padding"></div>
@@ -186,14 +167,14 @@ function Home() {
 
               <div class="tabs-element reverse">
                 <div class="tabs-content">
-                  <h4 class="text-weight-medium">Polygon PoS <span class="solution-status">Live</span></h4>
+                  <h4 class="text-weight-medium"><a href="docs/zkEVM/introduction">Polygon zkEVM </a><span class="solution-status">Testnet</span></h4>
                   <div class="padding-bottom padding-small"></div>
-                  <p class="description-text">Support the most widely used Ethereum scaling ecosystem that offers EVM compatibility and an ultimate user experience with fast transactions at near-zero gas fees today.</p>
+                  <p class="description-text">Unlock Ethereum scalability while maintaining security with the first ZK-rollup that offers EVM equivalence with fast transactions at near-zero gas cost today.</p>
                   <div class="padding-bottom custom-padding"></div>
                 </div>
                 <div class="tabs_animation-wrapper">
                   <div class="tabs_animation-embed pb_video_embed w-embed w-iframe">
-                    <iframe src="https://player.vimeo.com/video/791153898?h=a0b62c3daa&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;autoplay=1&amp;background=1" frameborder="0" allow="autoplay" class="tabs-frame" title="Hero" data-ready="true"></iframe>
+                    <iframe src="https://player.vimeo.com/video/791153931?h=a0b62c3daa&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&background=1" frameborder="0" allow="autoplay" class="tabs-frame" title="Hero" data-ready="true"></iframe>
                   </div>
                 </div>
               </div>
@@ -201,17 +182,66 @@ function Home() {
               <div class="tabs-element">
                 <div class="tabs_animation-wrapper">
                   <div class="tabs_animation-embed pb_video_embed w-embed w-iframe">
-                    <iframe src="https://player.vimeo.com/video/791153898?h=a0b62c3daa&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;autoplay=1&amp;background=1" frameborder="0" allow="autoplay" class="tabs-frame" title="Hero" data-ready="true"></iframe>
+                    <iframe src="https://player.vimeo.com/video/791153877?h=a0b62c3daa&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&background=1" frameborder="0" allow="autoplay" class="tabs-frame" title="Hero" data-ready="true"></iframe>
                   </div>
                 </div>
                 <div class="tabs-content">
-                  <h4 class="text-weight-medium">Polygon PoS  <span class="solution-status">Live</span></h4>
+                  <h4 class="text-weight-medium"><a href="docs/miden/intro/main">Polygon Miden </a><span class="solution-status">Coming Soon</span></h4>
                   <div class="padding-bottom padding-small"></div>
-                  <p class="description-text">Support the most widely used Ethereum scaling ecosystem that offers EVM compatibility and an ultimate user experience with fast transactions at near-zero gas fees today.</p>
+                  <p class="description-text">Build advanced dApps with client-side proving with the first decentralized rollup that leverages execution proofs of concurrent, local transactions.</p>
                   <div class="padding-bottom custom-padding"></div>
                 </div>
               </div>
             </TabItem>
+
+            <TabItem value="app-specific">
+              <div class="tabs-element">
+                <div class="tabs_animation-wrapper">
+                  <div class="tabs_animation-embed pb_video_embed w-embed w-iframe">
+                    <iframe src="https://player.vimeo.com/video/791153912?h=a0b62c3daa&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&background=1" frameborder="0" allow="autoplay" class="tabs-frame" title="Hero" data-ready="true"></iframe>
+                  </div>
+                </div>
+                <div class="tabs-content">
+                  <h4 class="text-weight-medium"><a href="docs/supernets/overview">Polygon Supernets </a><span class="solution-status">Coming Soon</span></h4>
+                  <div class="padding-bottom padding-small"></div>
+                  <p class="description-text">Build app-chains powered by an industry-leading technology and ecosystem around Polygon.</p>
+                  <div class="padding-bottom custom-padding"></div>
+                </div>
+              </div>
+            </TabItem>
+
+            <TabItem value="da">
+              <div class="tabs-element">
+                <div class="tabs_animation-wrapper">
+                  <div class="tabs_animation-embed pb_video_embed w-embed w-iframe">
+                    <iframe src="https://player.vimeo.com/video/791153857?h=a0b62c3daa&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&background=1" frameborder="0" allow="autoplay" class="tabs-frame" title="Hero" data-ready="true"></iframe>
+                  </div>
+                </div>
+                <div class="tabs-content">
+                  <h4 class="text-weight-medium"><a href="docs/avail/introduction/what-is-avail">Polygon Avail </a><span class="solution-status">Coming Soon</span></h4>
+                  <div class="padding-bottom padding-small"></div>
+                  <p class="description-text">Increase throughput without sacrificing decentralization with a base consensus and data availability layer for chains.</p>
+                  <div class="padding-bottom custom-padding"></div>
+                </div>
+              </div>
+            </TabItem>
+
+            <TabItem value="identity">
+              <div class="tabs-element">
+                <div class="tabs_animation-wrapper">
+                  <div class="tabs_animation-embed pb_video_embed w-embed w-iframe">
+                    <iframe src="https://player.vimeo.com/video/791153864?h=a0b62c3daa&badge=0&autopause=0&player_id=0&app_id=58479&loop=1&autoplay=1&background=1" frameborder="0" allow="autoplay" class="tabs-frame" title="Hero" data-ready="true"></iframe>
+                  </div>
+                </div>
+                <div class="tabs-content">
+                  <h4 class="text-weight-medium"><a href="docs/polygonid/overview">Polygon ID  </a><span class="solution-status">Live</span></h4>
+                  <div class="padding-bottom padding-small"></div>
+                  <p class="description-text">Build trusted and secure relationships between users and dApps, following the principles of self sovereign identity and privacy by default.</p>
+                  <div class="padding-bottom custom-padding"></div>
+                </div>
+              </div>
+            </TabItem>
+
           </Tabs>
           </section>
           </div>
