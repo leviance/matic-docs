@@ -236,7 +236,7 @@ function Home() {
                   </div>
                 </div>
                 <div class="tabs-content">
-                  <h4 class="text-weight-medium">Polygon Supernets <span class="solution-status">Coming Soon</span></h4>
+                  <h4 class="text-weight-medium">Polygon Supernets <span class="solution-status">Testnet</span></h4>
                   <div class="padding-bottom padding-small"></div>
                   <p class="description-text">Build app-chains powered by an industry-leading technology and ecosystem around Polygon.</p>
                   <div class="padding-bottom custom-padding"></div>
@@ -253,7 +253,7 @@ function Home() {
                   </div>
                 </div>
                 <div class="tabs-content">
-                  <h4 class="text-weight-medium">Polygon Avail <span class="solution-status">Coming Soon</span></h4>
+                  <h4 class="text-weight-medium">Polygon Avail <span class="solution-status">Testnet</span></h4>
                   <div class="padding-bottom padding-small"></div>
                   <p class="description-text">Increase throughput without sacrificing decentralization with a base consensus and data availability layer for chains.</p>
                   <div class="padding-bottom custom-padding"></div>
