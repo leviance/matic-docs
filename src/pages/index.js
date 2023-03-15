@@ -5,7 +5,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./styles.module.css";
-import { firstRow, publicRow, thirdRow, networkBanner } from "../data/features";
+import { firstRow, thirdRow, networkBanner } from "../data/features";
 import SearchBar from '@theme-original/SearchBar'; // Import the SearchBar component
 
 import Tabs from '@theme/Tabs';
