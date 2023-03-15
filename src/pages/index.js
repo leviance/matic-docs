@@ -84,6 +84,37 @@ function BigBlock({title, status, description, linkUrl, imageUrl}) {
   );
 }
 
+function Buttonizer({docsUrl, linkUrl}) {
+  return (
+    <div className="button-group">
+      <a href={useBaseUrl(docsUrl)} className="button is-icon w-inline-flex">
+        <div className="button-icon_left-element is-icon-medium">
+          <div className="text-size-small">Open Docs</div>
+        </div>
+        <div className="button-icon_right-element is-icon-medium">
+          <div className="icon-1x1-medium w-embed">
+            <svg width="auto" height="auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7V17M17 7H7" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </div>
+      </a>
+      <a href={linkUrl} className="button is-icon is-secondary w-inline-flex">
+        <div className="button-icon_left-element is-icon-medium">
+          <div className="text-size-small">Learn More</div>
+        </div>
+        <div className="button-icon_right-element is-icon-medium">
+          <div className="icon-1x1-medium w-embed">
+            <svg width="auto" height="auto" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 17L17 7M17 7V17M17 7H7" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  );
+}
+
 function smoothScrollTo(target) {
   const element = document.querySelector(target);
   if (element) {
@@ -158,19 +189,21 @@ function Home() {
                   </div>
                 </div>
                 <div class="tabs-content">
-                  <h4 class="text-weight-medium"><a href="docs/pos/polygon-architecture">Polygon PoS </a><span class="solution-status">Live</span></h4>
+                  <h4 class="text-weight-medium">Polygon PoS <span class="solution-status">Live</span></h4>
                   <div class="padding-bottom padding-small"></div>
                   <p class="description-text">Support the most widely used Ethereum scaling ecosystem that offers EVM compatibility and an ultimate user experience with fast transactions at near-zero gas fees today.</p>
                   <div class="padding-bottom custom-padding"></div>
+                  <Buttonizer docsUrl={'docs/pos/polygon-architecture'} linkUrl={'https://polygon.technology/polygon-pos'} />
                 </div>
               </div>
 
               <div class="tabs-element reverse">
                 <div class="tabs-content">
-                  <h4 class="text-weight-medium"><a href="docs/zkEVM/introduction">Polygon zkEVM </a><span class="solution-status">Testnet</span></h4>
+                  <h4 class="text-weight-medium">Polygon zkEVM <span class="solution-status">Testnet</span></h4>
                   <div class="padding-bottom padding-small"></div>
                   <p class="description-text">Unlock Ethereum scalability while maintaining security with the first ZK-rollup that offers EVM equivalence with fast transactions at near-zero gas cost today.</p>
                   <div class="padding-bottom custom-padding"></div>
+                  <Buttonizer docsUrl={'docs/zkEVM/introduction'} linkUrl={'https://polygon.technology/polygon-zkevm'} /> 
                 </div>
                 <div class="tabs_animation-wrapper">
                   <div class="tabs_animation-embed pb_video_embed w-embed w-iframe">
@@ -186,10 +219,11 @@ function Home() {
                   </div>
                 </div>
                 <div class="tabs-content">
-                  <h4 class="text-weight-medium"><a href="docs/miden/intro/main">Polygon Miden </a><span class="solution-status">Coming Soon</span></h4>
+                  <h4 class="text-weight-medium">Polygon Miden <span class="solution-status">Coming Soon</span></h4>
                   <div class="padding-bottom padding-small"></div>
                   <p class="description-text">Build advanced dApps with client-side proving with the first decentralized rollup that leverages execution proofs of concurrent, local transactions.</p>
                   <div class="padding-bottom custom-padding"></div>
+                  <Buttonizer docsUrl={'docs/miden/intro/main'} linkUrl={'https://polygon.technology/polygon-miden'} />
                 </div>
               </div>
             </TabItem>
@@ -202,10 +236,11 @@ function Home() {
                   </div>
                 </div>
                 <div class="tabs-content">
-                  <h4 class="text-weight-medium"><a href="docs/supernets/overview">Polygon Supernets </a><span class="solution-status">Coming Soon</span></h4>
+                  <h4 class="text-weight-medium">Polygon Supernets <span class="solution-status">Coming Soon</span></h4>
                   <div class="padding-bottom padding-small"></div>
                   <p class="description-text">Build app-chains powered by an industry-leading technology and ecosystem around Polygon.</p>
                   <div class="padding-bottom custom-padding"></div>
+                  <Buttonizer docsUrl={'docs/supernets/overview'} linkUrl={'https://polygon.technology/polygon-supernets'} />
                 </div>
               </div>
             </TabItem>
@@ -218,10 +253,11 @@ function Home() {
                   </div>
                 </div>
                 <div class="tabs-content">
-                  <h4 class="text-weight-medium"><a href="docs/avail/introduction/what-is-avail">Polygon Avail </a><span class="solution-status">Coming Soon</span></h4>
+                  <h4 class="text-weight-medium">Polygon Avail <span class="solution-status">Coming Soon</span></h4>
                   <div class="padding-bottom padding-small"></div>
                   <p class="description-text">Increase throughput without sacrificing decentralization with a base consensus and data availability layer for chains.</p>
                   <div class="padding-bottom custom-padding"></div>
+                  <Buttonizer docsUrl={'docs/avail/introduction/what-is-avail'} linkUrl={'https://polygon.technology/polygon-avail'} />
                 </div>
               </div>
             </TabItem>
@@ -234,10 +270,11 @@ function Home() {
                   </div>
                 </div>
                 <div class="tabs-content">
-                  <h4 class="text-weight-medium"><a href="docs/polygonid/overview">Polygon ID  </a><span class="solution-status">Live</span></h4>
+                  <h4 class="text-weight-medium">Polygon ID  <span class="solution-status">Live</span></h4>
                   <div class="padding-bottom padding-small"></div>
                   <p class="description-text">Build trusted and secure relationships between users and dApps, following the principles of self sovereign identity and privacy by default.</p>
                   <div class="padding-bottom custom-padding"></div>
+                  <Buttonizer docsUrl={'docs/polygonid/overview'} linkUrl={'https://polygon.technology/polygon-id'} />
                 </div>
               </div>
             </TabItem>
