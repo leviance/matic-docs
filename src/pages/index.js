@@ -32,7 +32,6 @@ function NetworkBanner({title, class_name, description, linkUrl, imageUrl}) {
 function FirstRow({ title, status, description, linkUrl, imageUrl }) {
   // const imgUrl = useBaseUrl(imageUrl);
   return (
-
     <div className="col-md-4 p-8">
       <Link to={useBaseUrl(linkUrl)} activeClassName="active">
         <div className="show-card">
@@ -45,24 +44,23 @@ function FirstRow({ title, status, description, linkUrl, imageUrl }) {
         </div>
       </Link>
     </div>
-
   );
 }
 
-function SecondRow({ title, status, description, linkUrl, imageUrl }) {
-  // const imgUrl = useBaseUrl(imageUrl);
+function SecondRow({ title, status, description, linkUrl, animationUrl }) {
   return (
-    <div className="col-md-4 p-8">
-      <Link to={useBaseUrl(linkUrl)}>
-        <div className="show-card">
-          <div className="icon-wrapper">
-            <img src={useBaseUrl(imageUrl)} alt={title} className="icon" />
-          </div>
-          <div className="status">{status}</div>
-          <div className="title">{title}</div>
-          <div className="descriptions">{description}</div>
+    <div className="tabs-element">
+      <div className="tabs_animation-wrapper">
+        <div className="tabs_animation-embed">
+          <iframe src={animationUrl} frameborder="0" allow="autoplay" className="tabs-frame" title="Hero" data-ready="true"></iframe>
         </div>
-      </Link>
+      </div>
+      <div class="tabs-content">
+        <h4 class="text-weight-medium">{title}<span class="solution-status">{status}</span></h4>
+        <div class="padding-bottom padding-small"></div>
+        <p class="description-text">{description}</p>
+        <div class="padding-bottom custom-padding"></div>
+      </div>
     </div>
   );
 }
@@ -149,6 +147,8 @@ function Home() {
                 <FirstRow key={idx} {...props} />
               ))}{" "}
           </div>
+
+
           <div className="row">
             <div className="index-page">
               <section className="section container-fluid">
@@ -161,12 +161,59 @@ function Home() {
                 </div>
               </section>
             </div>
-            <section id="polygon-protocols" className="section container-fluid"></section>
-            {secondRow &&
-              secondRow.length &&
-              secondRow.map((props, idx) => (
-                <SecondRow key={idx} {...props} />
-              ))}{" "}
+            <section id="polygon-protocols" className="row container-fluid justify-content-center">
+            <Tabs defaultValue="public" values={[
+                {label: 'Public Chains', value: 'public'},
+                {label: 'App Specific Chains', value: 'app-specific'},
+                {label: 'Data Availability', value: 'da'},
+                {label: 'Decentralized Identity', value: 'identity'},
+              ]}>
+              
+            <TabItem value="public">
+              <div class="tabs-element">
+                <div class="tabs_animation-wrapper">
+                  <div class="tabs_animation-embed pb_video_embed w-embed w-iframe">
+                    <iframe src="https://player.vimeo.com/video/791153898?h=a0b62c3daa&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;autoplay=1&amp;background=1" frameborder="0" allow="autoplay" class="tabs-frame" title="Hero" data-ready="true"></iframe>
+                  </div>
+                </div>
+                <div class="tabs-content">
+                  <h4 class="text-weight-medium">Polygon PoS  <span class="solution-status">Live</span></h4>
+                  <div class="padding-bottom padding-small"></div>
+                  <p class="description-text">Support the most widely used Ethereum scaling ecosystem that offers EVM compatibility and an ultimate user experience with fast transactions at near-zero gas fees today.</p>
+                  <div class="padding-bottom custom-padding"></div>
+                </div>
+              </div>
+
+              <div class="tabs-element reverse">
+                <div class="tabs-content">
+                  <h4 class="text-weight-medium">Polygon PoS <span class="solution-status">Live</span></h4>
+                  <div class="padding-bottom padding-small"></div>
+                  <p class="description-text">Support the most widely used Ethereum scaling ecosystem that offers EVM compatibility and an ultimate user experience with fast transactions at near-zero gas fees today.</p>
+                  <div class="padding-bottom custom-padding"></div>
+                </div>
+                <div class="tabs_animation-wrapper">
+                  <div class="tabs_animation-embed pb_video_embed w-embed w-iframe">
+                    <iframe src="https://player.vimeo.com/video/791153898?h=a0b62c3daa&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;autoplay=1&amp;background=1" frameborder="0" allow="autoplay" class="tabs-frame" title="Hero" data-ready="true"></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tabs-element">
+                <div class="tabs_animation-wrapper">
+                  <div class="tabs_animation-embed pb_video_embed w-embed w-iframe">
+                    <iframe src="https://player.vimeo.com/video/791153898?h=a0b62c3daa&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;loop=1&amp;autoplay=1&amp;background=1" frameborder="0" allow="autoplay" class="tabs-frame" title="Hero" data-ready="true"></iframe>
+                  </div>
+                </div>
+                <div class="tabs-content">
+                  <h4 class="text-weight-medium">Polygon PoS  <span class="solution-status">Live</span></h4>
+                  <div class="padding-bottom padding-small"></div>
+                  <p class="description-text">Support the most widely used Ethereum scaling ecosystem that offers EVM compatibility and an ultimate user experience with fast transactions at near-zero gas fees today.</p>
+                  <div class="padding-bottom custom-padding"></div>
+                </div>
+              </div>
+            </TabItem>
+          </Tabs>
+          </section>
           </div>
 
           <div className="row">
