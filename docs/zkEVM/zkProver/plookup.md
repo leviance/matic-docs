@@ -15,13 +15,13 @@ image: https://wiki.polygon.technology/img/thumbnail/polygon-zkevm.png
 
 The **Main State Machine Executor** sends various instructions to the secondary state machines within the zkProver. Although secondary state machines specialize in specific types of computations, they frequently use [**Plookup**](https://eprint.iacr.org/2020/315.pdf) in their PIL codes to complete tasks mandated by the Main SM Executor.
 
-This subsection is part of the Generic SM, and its goal is to define Plookup before showing how it is used in PIL verification.
+This subsection is part of the Generic SM and its goal is to define Plookup before showing how it is used in PIL verification.
 
 ## What is Plookup?
 
-Plookup was described by the original authors in [GW20](https://eprint.iacr.org/2020/315.pdf) as a protocol for checking whether values of a committed polynomial, over a multiplicative subgroup $\text{H}$ of a finite field  $\mathbb{F}$, are contained in a vector  $\mathbf{t} \in \mathbb{F}^d$  that represents values of a table  $\mathcal{T}$. More precisely, Plookup is used to check if certain evaluations of some committed polynomial is part of some row $\mathbf{t}$ of a lookup table  $\mathcal{T}$.
+Plookup was described by the original authors in [GW20](https://eprint.iacr.org/2020/315.pdf) as a protocol for checking whether values of a committed polynomial, over a multiplicative subgroup $\text{H}$ of a finite field  $\mathbb{F}$, are contained in a vector  $\mathbf{t} \in \mathbb{F}^d$  that represents values of a table  $\mathcal{T}$. More precisely, Plookup is used to check if certain evaluations of some committed polynomial are part of some row $\mathbf{t}$ of a lookup table  $\mathcal{T}$.
 
-One particular use case of this primitive is: Checking whether all evaluations of a polynomial $f(x)$, restricted to values of a multiplicative subgroup $\text{H} \sub \mathbb{F}$, fall in a given range $\{ 0 , 1 , \dots , M \}$. i.e., Proving that, for every $z \in \text{H}$, we have $\mathbf{f(z) \in \{ 0 , 1 , \dots , M \}}$.   
+One particular use case of this primitive is: checking whether all evaluations of a polynomial $f(x)$, restricted to values of a multiplicative subgroup $\text{H} \sub \mathbb{F}$, fall in a given range $\{ 0 , 1 , \dots , M \}$. i.e., proving that, for every $z \in \text{H}$, we have $\mathbf{f(z) \in \{ 0 , 1 , \dots , M \}}$.   
 
 Plookup's strategy for soundness depends on a few basic mathematical concepts described below.
 
@@ -37,7 +37,7 @@ Given a multiset $\mathbf{s}$, we define **multiplicity** to be the number of al
 
 So, in the multiset  $\{ 3 , 7 , 1 , 7 , 1 , 1 \}$; the element  $3$  has multiplicity 1, while  $7$  is of multiplicity  2 , and lastly, $1$  has multiplicity  3.
 
-Therefore, a **set** can be described as a collection of distinct objects where multiplicity and ordering of objects has no significance.
+Therefore, a **set** can be described as a collection of distinct objects where multiplicity and ordering of objects have no significance.
 
 Multisets are similar to sets in that they also do not respect the ordering of elements. That is, $\{ 1 , 3 , 1 , 7 \}$ and $\{ 1, 7 , 1 , 3 \}$ represent the same multiset, because they both contain the same elements, each with the same multiplicity.
 
@@ -49,7 +49,7 @@ Unless otherwise stated, all sorted multisets will henceforth be **sorted by $\m
 
 For any given sorted multiset $\mathbf{s} = \{a_1 , a_2 , \dots , a_n\}$, define **the set of differences** of $\mathbf{s}$ as the set of non-zero differences $\{a_2 - a_1 , a_3 - a_2 , \dots , a_n - a_{n-1}\}$. That is, zero-differences, $a_i - a_{i-1} = 0$, are discarded.
 
-Take as examples, the following sorted multisets; $\mathbf{t} = \{1, 3, 7\}$, $\mathbf{s} = \{1 , 1 , 1 , 3 , 7 , 7\}$ and $\mathbf{r} = \{2, 6, 6, 6, 8\}$. These three multisets have the same set of differences, which is $\{2, 4\}$. 
+Take as examples the following sorted multisets: $\mathbf{t} = \{1, 3, 7\}$, $\mathbf{s} = \{1 , 1 , 1 , 3 , 7 , 7\}$ and $\mathbf{r} = \{2, 6, 6, 6, 8\}$. These three multisets have the same set of differences, which is $\{2, 4\}$. 
 
 Although $\mathbf{r}$ has the same set of differences as $\mathbf{s}$ and $\mathbf{t}$, note that the differences appear in a different order; 4 appeared first then 2.
 
@@ -57,7 +57,7 @@ Although $\mathbf{r}$ has the same set of differences as $\mathbf{s}$ and $\math
 
 Let $\mathbf{s}$ and $\mathbf{t}$ be ordered multisets, $\mathbf{s} = \{s_1 , s_2 , \dots , s_d\}$ and none of the elements of $\mathbf{t}  = \{t_1 , t_2 , \dots , t_n\}$ are repeated. 
 
-It can be observed that;
+It can be observed that:
 
 - If $\mathbf{s} \subset \mathbf{t}$ and $s_d = t_n$, then $\mathbf{s}$ and $\mathbf{t}$ have the same set of differences and the differences appear in the same order.
 
@@ -72,9 +72,9 @@ It follows from these three observations that the criteria for testing containme
 
 #### Testing For Repeated Elements
 
-Consider again the ordered multisets; $\mathbf{t} = \{t_1 , t_2 , \dots , t_n\}$ and $\mathbf{s} = \{s_1 , s_2 , \dots , s_d\}$.
+Consider again the ordered multisets: $\mathbf{t} = \{t_1 , t_2 , \dots , t_n\}$ and $\mathbf{s} = \{s_1 , s_2 , \dots , s_d\}$.
 
-If $\mathbf{s}$ has some repeated elements, $s_i = s_{i+1}$ for some $1 \leq i \leq n$, then these can be tested for by comparing randomized sets of differences.
+If $\mathbf{s}$ has some repeated elements, $s_i = s_{i+1}$ for some $1 \leq i \leq n$, then these can be tested by comparing randomized sets of differences.
 
 A **randomized set of differences** related to $\mathbf{s}$ is created by selecting a random field element $\beta \in \mathbb{F}$ and defined as the set $\{s_i + \beta\cdot s_{i+1}\ |\ 1 \leq i < d \}$.   
 
