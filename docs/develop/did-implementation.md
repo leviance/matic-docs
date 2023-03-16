@@ -46,7 +46,7 @@ npm i @ayanworks/polygon-did-registrar --save
 Once the installation is completed, the user can use it as follows:
 
 ```
-import { createDID } from "polygon-did-registrar";
+import { createDID } from "@ayanworks/polygon-did-registrar";
 ```
 
 The `createdDID` function helps user generate a DID URI. While creating a DID, there can be two scenarios.
@@ -84,7 +84,7 @@ DID testnet: did:polygon:testnet:0x...
 To register the DID URI and the corresponding DID document on ledger, the user first needs to use `polygon-did-registrar` as follows:
 
 ```js
-import { registerDID } from "polygon-did-registrar";
+import { registerDID } from "@ayanworks/polygon-did-registrar;
 ```
 
 As a prerequisite to registering DID, the user needs to make sure that the wallet corrsponding to the DID has the necessary tokens balance available. Once the user has a token balance in the wallet, a call can be made to the registerDID functionality as shown below:
@@ -142,7 +142,7 @@ It should be noted that, no gas cost will be entailed by the user while trying t
 To encapsulate the project with the ability to update the DID document, the user first needs to use `polygon-did-registrar` as follows:
 
 ```js
-import { updateDidDoc } from "polygon-did-registrar";
+import { updateDidDoc } from "@ayanworks/polygon-did-registrar";
 ```
 
 Next, call the function:
@@ -160,7 +160,7 @@ If the user does not provide the configuration with `url` and `contractAddress`,
 With Polygon DID implementation a user can also revoke his DID Document from the ledger. The user first needs to use `polygon-did-registrar` as follows:
 
 ```js
-import { deleteDidDoc } from "polygon-did-registrar";
+import { deleteDidDoc } from "@ayanworks/polygon-did-registrar";
 ```
 
 Then use,
