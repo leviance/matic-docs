@@ -89,7 +89,7 @@ function Buttonizer({docsUrl, linkUrl}) {
     <div className="button-group">
       <a href={useBaseUrl(docsUrl)} className="button is-icon w-inline-flex">
         <div className="button-icon_left-element is-icon-medium">
-          <div className="text-size-small">Open Docs</div>
+          <div className="text-size-small">Get Started</div>
         </div>
         <div className="button-icon_right-element is-icon-medium">
           <div className="icon-1x1-medium w-embed">
@@ -101,7 +101,7 @@ function Buttonizer({docsUrl, linkUrl}) {
       </a>
       <a href={linkUrl} className="button is-icon is-secondary w-inline-flex">
         <div className="button-icon_left-element is-icon-medium">
-          <div className="text-size-small">Learn More</div>
+          <div className="text-size-small">Start Building</div>
         </div>
         <div className="button-icon_right-element is-icon-medium">
           <div className="icon-1x1-medium w-embed">
@@ -203,7 +203,7 @@ function Home() {
                   <div class="padding-bottom padding-small"></div>
                   <p class="description-text">Unlock Ethereum scalability while maintaining security with the first ZK-rollup that offers EVM equivalence with fast transactions at near-zero gas cost today.</p>
                   <div class="padding-bottom custom-padding"></div>
-                  <Buttonizer docsUrl={'docs/zkEVM/introduction'} linkUrl={'https://polygon.technology/polygon-zkevm'} /> 
+                  <Buttonizer docsUrl={'docs/zkEVM/introduction'} linkUrl={'https://polygon.technology/polygon-zkevm'} />
                 </div>
                 <div class="tabs_animation-wrapper">
                   <div class="tabs_animation-embed pb_video_embed w-embed w-iframe">
